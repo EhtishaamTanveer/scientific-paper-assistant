@@ -1,0 +1,38 @@
+.reading-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .left-pane,
+  .right-pane {
+    flex: 1;
+    padding: 20px;
+    overflow-y: scroll;
+  }
+  
+  .left-pane {
+    border-right: 2px solid #eee;
+    background-color: #fdfdfd;
+  }
+  
+  .right-pane {
+    background-color: #f9f9f9;
+  }
+  
+  .summary-section {
+    margin-bottom: 20px;
+  }
+  
+  .summary-section h4 {
+    color: #0077cc;
+    margin-bottom: 5px;
+  }
+  
+  mark {
+    background-color: #ffff99;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+  

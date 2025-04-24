@@ -1,0 +1,227 @@
+/* IntroScreen.css */
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f8faff 0%, #e9f2ff 100%);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.intro-content {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.logo-container {
+  background: linear-gradient(135deg, #0077cc 0%, #00aaff 100%);
+  width: 90px;
+  height: 90px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px rgba(0, 119, 204, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 60%);
+  animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo-icon {
+  font-size: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #1a365d;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #1a365d 0%, #0077cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.instructions {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 650px;
+  margin-bottom: 36px;
+  color: #4a5568;
+  font-weight: 400;
+}
+
+.button-container {
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.button-container::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 119, 204, 0.1);
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+  z-index: 0;
+  filter: blur(10px);
+}
+
+.start-button {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #0077cc 0%, #00aaff 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 119, 204, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.start-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.start-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 119, 204, 0.4);
+}
+
+.start-button:hover::before {
+  left: 100%;
+}
+
+.start-button:active {
+  transform: translateY(-2px);
+}
+
+.button-icon {
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.start-button:hover .button-icon {
+  transform: translateX(5px);
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  width: calc(33.33% - 16px);
+  min-width: 220px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a365d;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #718096;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.3rem;
+  }
+  
+  .instructions {
+    font-size: 1.1rem;
+  }
+  
+  .feature-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .feature-card {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 16px;
+  }
+}
