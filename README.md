@@ -1,5 +1,7 @@
 # 🧠 Scientific Paper Assistant
 
+**The goal of this project is to help users quickly grasp key insights from research papers without having to read them in full — by letting an intelligent assistant summarize content and answer questions contextually.**
+
 An AI-powered web app that allows researchers and students to:
 
 - Upload scientific papers (PDFs)
@@ -24,14 +26,20 @@ An AI-powered web app that allows researchers and students to:
 ---
 
 ## 📸 Screenshots
-
-> _(Add screenshots here once deployed or during local testing)_
+### Welcome Screen
+> ![Intro Page](src/assets/Intro.png)
+### Upload Your Document Here
+> ![Document Upload Page](src/assets/Upload.png)
+### Observe Your Paper Summary
+> ![Paper Summary Generator Page](src/assets/Summary.png)
+### Ask Questions About The Paper
+> ![QA Assistant Page](src/assets/QA.png)
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Frontend:** React + Vite
+- **Frontend:** React
 - **LLM:** OpenAI GPT-4o
 - **PDF Parsing:** pdfjs-dist
 - **UI:** Custom CSS + modern layouts
@@ -70,7 +78,7 @@ npm run dev
 The app will be live at: http://localhost:5173
 
 ### 📁 Folder Structure
-
+```bash
 src/
 ├── components/
 │ ├── IntroScreen.js
@@ -83,7 +91,7 @@ src/
 ├── App.jsx
 ├── main.jsx
 └── index.css
-
+```
 ### 📌 Future Enhancements
 
 - 🧮 Equation rendering with KaTeX
